@@ -1,0 +1,147 @@
+/* Define Theme Colors */
+:root {
+    --primary-color: #1d417b;
+    --secondary-color: #235078;
+    --accent-color: #1d4975;
+    --light-bg: rgba(213, 232, 251, 0.2);
+    --hover-bg: rgba(161, 205, 234, 0.3);
+    --border-color: rgba(34, 71, 105, 0.4);
+}
+
+.portfolioPage {
+    padding-top: 13vh;
+    width: 100%;
+    background: linear-gradient(135deg, #e0f7fa, #fff);
+    transition: all 0.3s ease-in-out;
+}
+
+.user-portfolio-container {
+    width: 90%;
+    height: 85vh;
+    margin-left: 5%;
+    border-radius: 0.6rem;
+    background: linear-gradient(145deg, #f3f9ff, #e6f3fa);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.user-portfolio-container:hover {
+    transform: scale(1.02);
+}
+
+/* Header */
+.user-portfolio-container-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 4vw 2vh 1vw;
+    margin: 0 1vw;
+    border-bottom: 2px solid var(--border-color);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+.user-portfolio-container-head h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Search Bar */
+.user-portfolio-container-search input {
+    width: 20vw;
+    padding: 10px;
+    outline: none;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    border: 2px solid var(--border-color);
+    background-color: white;
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.user-portfolio-container-search input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.user-portfolio-container-search #searchIcon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    left: -2rem;
+    color: var(--accent-color);
+    transition: color 0.3s;
+}
+
+.user-portfolio-container-search #searchIcon:hover {
+    color: var(--primary-color);
+}
+
+/* Portfolio List */
+.user-portfolio {
+    height: 70vh;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.user-portfolio::-webkit-scrollbar {
+    display: none;
+}
+
+/* Stock Cards */
+.user-portfolio-stock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--border-color);
+    margin: 0 2rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(145deg, #f3f9ff, #e6f3fa);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-portfolio-stock:hover {
+    background: linear-gradient(to right, var(--hover-bg), #fff);
+    transform: scale(1.02);
+    border: 2px solid var(--primary-color);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Stock Details */
+.user-portfolio-stock span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.user-portfolio-stock span h5 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+}
+
+.user-portfolio-stock span p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Stock Badge */
+.user-portfolio-stock h6 {
+    margin: 0;
+    padding: 6px 10px;
+    background: linear-gradient(to right, #9fd3f7, #cfe7f8);
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}

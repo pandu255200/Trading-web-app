@@ -1,0 +1,122 @@
+.all-users-page {
+    width: 100%;
+    height: 100vh;
+    padding-top: 13vh;
+    padding-left: 3vw;
+    /* Animated gradient background with a natural, flowing feel */
+    background: linear-gradient(135deg, #e0f7e9, #f4f9f4);
+    background-size: 400% 400%;
+    font-family: 'Arial', sans-serif;
+    animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.all-users-page h2 {
+    margin-bottom: 4vh;
+    /* Gradient text effect with a pulsing glow and gentle slide-in */
+    background: linear-gradient(45deg, #2272a4, #33d17c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: 600;
+    animation: textPulse 2s infinite, titleSlide 1.5s ease-out;
+}
+
+@keyframes textPulse {
+    0%, 100% { text-shadow: 0 0 5px rgba(34, 114, 164, 0.5); }
+    50% { text-shadow: 0 0 20px rgba(51, 209, 124, 0.8); }
+}
+
+@keyframes titleSlide {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.all-users {
+    width: 80%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    animation: fadeIn 1s ease-out;
+}
+.all-users::-webkit-scrollbar {
+    display: none;
+}
+
+/* User card "landscape reveal" animation */
+.all-users .user {
+    width: 85%;
+    background: linear-gradient(90deg, #e3f2e3, #d0e8d0);
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    padding: 2vh 2vw;
+    gap: 2vw;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: landscapeReveal 1s ease-out forwards;
+    /* Optionally, add a staggered delay (e.g., animation-delay: 0.2s;) for sequential effect */
+}
+
+@keyframes landscapeReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.05);
+    }
+    80% {
+        transform: translateY(5px) scale(0.98);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.all-users .user:hover {
+    /* On hover, shift gradient and apply a subtle lift */
+    background: linear-gradient(90deg, #d0e8d0, #b8e0b8);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.all-users .user p {
+    margin: 0;
+    color: rgb(36, 132, 173);
+    font-size: 1rem;
+    animation: textFadeIn 1s ease-in;
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.all-users .user p b {
+    font-weight: 600;
+    color: rgb(32, 97, 124);
+    /* Subtle waving effect to evoke a natural breeze */
+    animation: textWaver 2s infinite;
+}
+
+@keyframes textWaver {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* General fade-in for elements */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

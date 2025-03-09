@@ -1,0 +1,207 @@
+/* Define Theme Colors */
+:root {
+    --primary-color: #3F5BD9;
+    --secondary-color: #2f3c76;
+    --accent-color: #5A7FD7;
+    --bg-gradient: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    --glass-effect: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Profile Page */
+.profilePage {
+    width: 100%;
+    padding-top: 12vh;
+    background: var(--bg-gradient);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Profile Heading */
+.profilePage h2 {
+    margin: 4vh 5vw;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Profile Box */
+.profileBox {
+    width: 80%;
+    margin-left: 10%;
+    padding: 3vh 3vw;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #f5faff, #e8f4ff);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.profileBox:hover {
+    transform: scale(1.02);
+}
+
+/* Profile Box Body */
+.profileBox-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 1vw;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.profileBox-body:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Details */
+.profileBox-body span {
+    margin: 0;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.profileBox-body span:hover {
+    transform: scale(1.05);
+}
+
+.profileBox-body span p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #1c1c1dad;
+}
+
+.profileBox-body span h6 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.cash-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.cash-actions button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Active Button */
+.cash-actions .cash-actions-active {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cash-actions .cash-actions-active:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Inactive Button */
+.cash-actions .cash-actions-inactive {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.cash-actions .cash-actions-inactive:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Funds Section */
+.ProfileFunds {
+    margin-left: 10%;
+    margin-top: 3vh;
+}
+
+.ProfileFunds h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.ProfileFunds form {
+    width: 35%;
+}
+
+.ProfileFunds input,
+.ProfileFunds select {
+    margin-left: 1.5rem;
+    padding: 10px;
+    border-radius: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.ProfileFunds input:focus,
+.ProfileFunds select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Transactions Section */
+.profileTransactions {
+    width: 60%;
+    height: 37vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.profileTransactions::-webkit-scrollbar {
+    display: none;
+}
+
+/* Transaction Cards */
+.profileTransaction {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 40px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profileTransaction:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Transaction Details */
+.profileTransaction span {
+    text-align: center;
+}
+
+.profileTransaction span h6 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.profileTransaction span p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
